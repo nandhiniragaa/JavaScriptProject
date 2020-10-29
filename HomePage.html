@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>NewBank</title>
+    
+     <link rel="stylesheet" href="HomePage.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <header> <p>  New <img src="l2.jpg" alt="" height="50px"> Bank  </p></header>
+    <nav><ul><a href=""><li>Home</li></a><li>|</li>
+            <a href=""><li>Personal</li></a><li>|</li>
+            <a href=""><li>Business</li></a><li>|</li>
+            <a href=""><li>Priority</li></a><li>|</li>
+            <a href=""><li>Burgundy</li></a><li>|</li>
+            <a href=""><li>NRI</li></a><li>|</li>
+            <a href=""><li>Branch</li></a><li>|</li>
+            <a href=""><li>About us</li></a>
+     </ul></nav>
+     <section>
+     <div id="one">
+         <div> <a href=""><img src="h6.png" alt="" height="120px"><br>Saving Account</a></div>         
+         <div> <a href=""><img src="h3.png" alt="" height="120px"><br>Express FD</a></div>
+         <div> <a href=""><img src="h4.png" alt="" height="120px"><br> Credit Card</a></div> 
+     </div> 
+     <div id="two">       
+         <div> <a href=""><img src="h7.png" alt="" height="120px"><br>Car Loan</a> </div> 
+         <div> <a href=""><img src="h1.png" alt="" height="120px"><br>Insurance</a> </div>
+         <div> <a href=""><img src="h2.png" alt="" height="120px"><br>Investments</a></div>
+     </div>
+     </section>
+     <article>
+          <div style="max-width:500px">
+               <img class="S2" src="s3.jpg" style="width:103%">
+               <img class="S2" src="s4.jpg" style="width:103%">
+               <img class="S2" src="s5.jpg" style="width:103%">               
+             </div>
+             
+             <script>
+             var myIndex = 0;
+             carousel();
+             
+             function carousel() {
+               var i;
+               var x = document.getElementsByClassName("S2");
+               for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+               }
+               myIndex++;
+               if (myIndex > x.length) {myIndex = 1}    
+               x[myIndex-1].style.display = "block";  
+               setTimeout(carousel, 2000);
+             }             
+             </script>  
+             
+             <div style="max-width:500px" class="login">
+               <form onsubmit="return Login()" action="Transaction.html">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="User ID" id="us"> <br><br>
+                    <span id="user"></span><br>
+                    <i class="fa fa-key"></i>
+                    <input type="password" placeholder="Password" id="pa"><br><br>
+                    <span id="pwd"></span>
+                    <input type="submit" value="Login">
+                </form>
+                <script src="Login.js"></script>
+             </div>
+     </article>
+     <aside>    
+          <div id="ten">
+               <!-- <h2>Online Transaction</h2>   -->
+               <a href="#" id="Net">Internet Banking</a><br>
+               <a href="#" id="UPI">UPI Transaction</a><br>
+               <a href="#" id="ussd">USSD</a><br>
+               <a href="#" id="Mobile">Mobile Banking</a><br>   
+               <img src="" alt="">         
+          </div>
+     </aside>
+     <footer>
+          <ul> <li>Copyright © 2020 New Bank</li>
+             <a href="">  <li>Disclaimer</li> </a><li>|</li>
+             <a href=""> <li>Privacy Policy</li></a><li>|</li>
+              <a href=""> <li>Responsible Disclosure Policy</li></a>
+          </ul>
+     </footer>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign UP - Bank Account</title>
+    <style>
+        body{
+            background: url(b3.jpg); 
+            background-size: cover;           
+        }
+
+        p{
+            text-align: center;
+            font-size: 30px;
+            color: rgb(17, 83, 4);
+            font-style: oblique;}
+        
+        #one{
+            margin: 50px;
+            margin-left: 250px;
+            margin-right: 500px;
+            margin-top: 90 px;
+            /* background-size:unset; */
+            /* background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.5); */
+            padding-left : 150px;
+            padding-bottom : 50px;
+            filter: alpha;             
+        }
+        input{border-radius: 5px; height: 25px; widows: 50px;}
+        #sub{
+            text-align: center;
+            width: 20%;
+            margin: 0px 0 0 103px;
+        }
+       
+    </style>
+</head>
+<body>      
+        <form onsubmit="return Validation1()" name="FormEnterance" action="HomePage.html" id="one">  
+              <p> New Customer Sign Up Page</p><br><br>                
+            <input type="text" placeholder="FirstName" id="fname"> &nbsp;&nbsp;&nbsp;
+            <span id="msg1" style="color: red;"></span>
+            <input type="text" placeholder="LastName" id="lname"><br><br>
+            <span id="msg2" style="color: red;"></span>
+            <input type="text" placeholder="MobileNumber" id="ph"><br><br>
+            <span id="msg3" style="color: red;"></span>
+            <input type="email"  placeholder="Mail Id" ><br><br>
+
+            <lable>Gender</lable>  &nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="radiobuttom">Female
+                 <input type="radio" name="radiobuttom">Male
+                 <input type="radio" name="radiobuttom">Custom
+            <br><br>
+            <label>Birthday</label>&nbsp;&nbsp;<input type="date" required>            
+            <br><br>
+            <input type="text"  placeholder="User ID" id="us">
+            <span id="msg4" style="color: red;"></span>
+            <br><br>
+            <input type="password"  placeholder="New Password">&nbsp;&nbsp;&nbsp;
+            <input type="password" required placeholder="Confirm">
+            <br><br>
+                 <input type="Submit" value="Sign Up" id="sub">          
+        </form>
+<script src="FirstPage.js"></script>
+     
+</body>
+</html>

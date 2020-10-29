@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transaction Page</title>
+    <link rel="stylesheet" href="Transaction.css">
+</head>
+<body>
+    <header>  <p>New Bank </p> 
+              <p>User Name : Nandhini Ganesan</p> 
+              <p>Account Number : 123456789 </p>   
+    </header>
+    <section>
+            <p> <strong>Funds Transfer </strong> </p>
+            <p> <strong>You can now avail a bouquet of funds transfer services through Internet banking </strong> </p>
+            <ul>
+                <li>Transfer funds within your own accounts</li>
+                <li>Transfer funds to third party account held in the same bank</li>
+                <li>Make an Inter bank funds transfer to any account held in any bank including State Bank Group</li>
+                <li>Pay any VISA credit card bill</li>
+                <li>Transfer funds to religious and Charitable institutions</li>
+                <li>Record standing instructions to transfer a fixed amount at a scheduled frequency for a period not exceeding one year</li>
+                <li>Transfer funds to NRE PIS accounts to facilitate online trading</li>
+            </ul>  
+    </section>
+
+
+    <article>
+        <br>
+        <form action="#">
+            &nbsp;&nbsp;&nbsp;&nbsp;<select name="" id="sele" required>
+                <option value="dep">Deposit</option>
+                <option value="with">Withdraw</option>
+            </select><br><br>
+            &nbsp;&nbsp;Current Balance:&nbsp;&nbsp;<input type="number" value="50000.0"  id="cb" disabled><br><br>
+            &nbsp;&nbsp;Description:&nbsp;&nbsp;<input type="text" id="des">
+            Amount:&nbsp;&nbsp; <input type="number" id="amt"><br><br>
+            &nbsp;&nbsp;<input type="submit" onclick="addrow()">
+        </form> 
+        <div id="one">
+            &nbsp;&nbsp;<fieldset>
+                <legend>Deposit Details</legend>
+                <table border="solid 2px" id="tab1">
+                    <tr>
+                        <td>Date</td>
+                        <td> Description</td>
+                        <td>Amount</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+        <div id="two">
+            <fieldset>
+                <legend>Withdraw Details</legend>
+                <table border="solid 2px" id="tab2">
+                    <tr>
+                        <td>Date</td>
+                        <td>Description</td>
+                        <td>Amount</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>         
+    
+        <script>
+            function addrow() {
+                var select = document.getElementById("sele").value
+                var bal = document.getElementById("cb").value
+        //       console.log(select)
+                if (select == "dep") 
+                {
+                    var table = document.getElementById("tab1");                    
+                //    console.log(table)
+                    var row = table.insertRow();
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    cell1.innerHTML = document.getElementById("des").value
+                    cell2.innerHTML = document.getElementById("amt").value
+
+                    document.getElementById("cb").value = (Number(document.getElementById("cb").value) + Number(document.getElementById("amt").value))
+                }
+                else
+                {
+                    if(select == "with">bal)
+                    {
+                        alert("Withdrawal not Possible")
+                    }
+                    else
+                    {
+                    var table = document.getElementById("tab2");
+                    console.log(table)
+                    var row = table.insertRow();
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+
+                    cell1.innerHTML = new Date().getDate()
+                    cell2.innerHTML = document.getElementById("des").value
+                    cell3.innerHTML = document.getElementById("amt").value
+
+                    document.getElementById("cb").value = Number(document.getElementById("cb").value) - Number(document.getElementById("amt").value)
+                    }
+                }
+            }
+        </script>
+    </article>
+    <footer>
+        <center>  Copyright &copy; 2020 New Bank </center>  
+    </footer>
+</body>
+</html>
